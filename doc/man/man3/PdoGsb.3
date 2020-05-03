@@ -1,0 +1,405 @@
+.TH "PdoGsb" 3 "Vendredi 24 Avril 2020" "Version 1" "GSBfrais" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PdoGsb
+.SH SYNOPSIS
+.br
+.PP
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fB__destruct\fP ()"
+.br
+.ti -1c
+.RI "\fBgetInfosVisiteur\fP ($login, $mdp)"
+.br
+.ti -1c
+.RI "\fBgetInfosComptable\fP ($login, $mdp)"
+.br
+.ti -1c
+.RI "\fBgetLesFraisHorsForfait\fP ($idVisiteur, $mois)"
+.br
+.ti -1c
+.RI "\fBgetNbjustificatifs\fP ($idVisiteur, $mois)"
+.br
+.ti -1c
+.RI "\fBgetLesFraisForfait\fP ($idVisiteur, $mois)"
+.br
+.ti -1c
+.RI "\fBgetLesIdFrais\fP ()"
+.br
+.ti -1c
+.RI "\fBmajFraisForfait\fP ($idVisiteur, $mois, $lesFrais)"
+.br
+.ti -1c
+.RI "\fBmajNbJustificatifs\fP ($idVisiteur, $mois, $nbJustificatifs)"
+.br
+.ti -1c
+.RI "\fBestPremierFraisMois\fP ($idVisiteur, $mois)"
+.br
+.ti -1c
+.RI "\fBdernierMoisSaisi\fP ($idVisiteur)"
+.br
+.ti -1c
+.RI "\fBcreeNouvellesLignesFrais\fP ($idVisiteur, $mois)"
+.br
+.ti -1c
+.RI "\fBcreeNouveauFraisHorsForfait\fP ( $idVisiteur, $mois, $libelle, $date, $montant)"
+.br
+.ti -1c
+.RI "\fBsupprimerFraisHorsForfait\fP ($idFrais)"
+.br
+.ti -1c
+.RI "\fBgetLesMoisDisponibles\fP ($idVisiteur)"
+.br
+.ti -1c
+.RI "\fBgetLesInfosFicheFrais\fP ($idVisiteur, $mois)"
+.br
+.ti -1c
+.RI "\fBmajEtatFicheFrais\fP ($idVisiteur, $mois, $etat)"
+.br
+.ti -1c
+.RI "\fBgetAllVisiteurs\fP ()"
+.br
+.ti -1c
+.RI "\fBgetAllMontantFrais\fP ()"
+.br
+.ti -1c
+.RI "\fBgetInfoVisiteur\fP ($id)"
+.br
+.ti -1c
+.RI "\fBmajFraisHf\fP ($idFraisHorsForfait, $libelleFrais, $dateFrais, $montantFrais)"
+.br
+.in -1c
+.SS "Fonctions membres publiques statiques"
+
+.in +1c
+.ti -1c
+.RI "static \fBgetPdoGsb\fP ()"
+.br
+.in -1c
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "__destruct ()"
+Méthode destructeur appelée dès qu'il n'y a plus de référence sur un objet donné, ou dans n'importe quel ordre pendant la séquence d'arrêt\&. 
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "creeNouveauFraisHorsForfait ( $idVisiteur,  $mois,  $libelle,  $date,  $montant)"
+Crée un nouveau frais hors forfait pour un visiteur un mois donné à partir des informations fournies en paramètre
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$idVisiteur\fP ID du visiteur 
+.br
+\fI$mois\fP Mois sous la forme aaaamm 
+.br
+\fI$libelle\fP Libellé du frais 
+.br
+\fI$date\fP Date du frais au format français jj//mm/aaaa 
+.br
+\fI$montant\fP Montant du frais
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+null 
+.RE
+.PP
+
+.SS "creeNouvellesLignesFrais ( $idVisiteur,  $mois)"
+Crée une nouvelle fiche de frais et les lignes de frais au forfait pour un visiteur et un mois donnés
+.PP
+Récupère le dernier mois en cours de traitement, met à 'CL' son champs idEtat, crée une nouvelle fiche de frais avec un idEtat à 'CR' et crée les lignes de frais forfait de quantités nulles
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$idVisiteur\fP ID du visiteur 
+.br
+\fI$mois\fP Mois sous la forme aaaamm
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+null 
+.RE
+.PP
+
+.SS "dernierMoisSaisi ( $idVisiteur)"
+Retourne le dernier mois en cours d'un visiteur
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$idVisiteur\fP ID du visiteur
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+le mois sous la forme aaaamm 
+.RE
+.PP
+
+.SS "estPremierFraisMois ( $idVisiteur,  $mois)"
+Teste si un visiteur possède une fiche de frais pour le mois passé en argument
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$idVisiteur\fP ID du visiteur 
+.br
+\fI$mois\fP Mois sous la forme aaaamm
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+vrai ou faux 
+.RE
+.PP
+
+.SS "getAllMontantFrais ()"
+Renvoie tous les id et le montant de la table FraisForfait 
+.PP
+\fBRenvoie\fP
+.RS 4
+array: un tableau associatif 
+.RE
+.PP
+
+.SS "getAllVisiteurs ()"
+Renvoie la liste de tous les visiteurs
+.PP
+\fBRenvoie\fP
+.RS 4
+array: la liste de tous les visiteurs 
+.RE
+.PP
+
+.SS "getInfosComptable ( $login,  $mdp)"
+Retourne les informations d'un comptable
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$login\fP Login du comptable 
+.br
+\fI$mdp\fP Mot de passe du comptable
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+l'id, le nom et le prénom sous la forme d'un tableau associatif 
+.RE
+.PP
+
+.SS "getInfosVisiteur ( $login,  $mdp)"
+Retourne les informations d'un visiteur
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$login\fP Login du visiteur 
+.br
+\fI$mdp\fP Mot de passe du visiteur
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+l'id, le nom et le prénom sous la forme d'un tableau associatif 
+.RE
+.PP
+
+.SS "getInfoVisiteur ( $id)"
+retourne les information d'un utilisateur de type visiteur grace a son id dans la bd
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$id\fP : l'id du visiteur dans la base de donn�es 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+array: Un tableau contenant l'id, le nom et le pr�nom du visiteur 
+.RE
+.PP
+
+.SS "getLesFraisForfait ( $idVisiteur,  $mois)"
+Retourne sous forme d'un tableau associatif toutes les lignes de frais au forfait concernées par les deux arguments
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$idVisiteur\fP ID du visiteur 
+.br
+\fI$mois\fP Mois sous la forme aaaamm
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+l'id, le libelle et la quantité sous la forme d'un tableau associatif 
+.RE
+.PP
+
+.SS "getLesFraisHorsForfait ( $idVisiteur,  $mois)"
+Retourne sous forme d'un tableau associatif toutes les lignes de frais hors forfait concernées par les deux arguments\&. La boucle foreach ne peut être utilisée ici car on procède à une modification de la structure itérée - transformation du champ date-
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$idVisiteur\fP ID du visiteur 
+.br
+\fI$mois\fP Mois sous la forme aaaamm
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+tous les champs des lignes de frais hors forfait sous la forme d'un tableau associatif 
+.RE
+.PP
+
+.SS "getLesIdFrais ()"
+Retourne tous les id de la table FraisForfait
+.PP
+\fBRenvoie\fP
+.RS 4
+un tableau associatif 
+.RE
+.PP
+
+.SS "getLesInfosFicheFrais ( $idVisiteur,  $mois)"
+Retourne les informations d'une fiche de frais d'un visiteur pour un mois donné
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$idVisiteur\fP ID du visiteur 
+.br
+\fI$mois\fP Mois sous la forme aaaamm
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+un tableau avec des champs de jointure entre une fiche de frais et la ligne d'état 
+.RE
+.PP
+
+.SS "getLesMoisDisponibles ( $idVisiteur)"
+Retourne les mois pour lesquel un visiteur a une fiche de frais
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$idVisiteur\fP ID du visiteur
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+un tableau associatif de clé un mois -aaaamm- et de valeurs l'année et le mois correspondant 
+.RE
+.PP
+
+.SS "getNbjustificatifs ( $idVisiteur,  $mois)"
+Retourne le nombre de justificatif d'un visiteur pour un mois donné
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$idVisiteur\fP ID du visiteur 
+.br
+\fI$mois\fP Mois sous la forme aaaamm
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+le nombre entier de justificatifs 
+.RE
+.PP
+
+.SS "static getPdoGsb ()\fC [static]\fP"
+Fonction statique qui crée l'unique instance de la classe Appel : $instancePdoGsb = \fBPdoGsb::getPdoGsb()\fP;
+.PP
+\fBRenvoie\fP
+.RS 4
+l'unique objet de la classe \fBPdoGsb\fP 
+.RE
+.PP
+
+.SS "majEtatFicheFrais ( $idVisiteur,  $mois,  $etat)"
+Modifie l'état et la date de modification d'une fiche de frais\&. Modifie le champ idEtat et met la date de modif à aujourd'hui\&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$idVisiteur\fP ID du visiteur 
+.br
+\fI$mois\fP Mois sous la forme aaaamm 
+.br
+\fI$etat\fP Nouvel état de la fiche de frais
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+null 
+.RE
+.PP
+
+.SS "majFraisForfait ( $idVisiteur,  $mois,  $lesFrais)"
+Met à jour la table ligneFraisForfait Met à jour la table ligneFraisForfait pour un visiteur et un mois donné en enregistrant les nouveaux montants
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$idVisiteur\fP ID du visiteur 
+.br
+\fI$mois\fP Mois sous la forme aaaamm 
+.br
+\fI$lesFrais\fP tableau associatif de clé idFrais et de valeur la quantité pour ce frais
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+null 
+.RE
+.PP
+
+.SS "majFraisHf ( $idFraisHorsForfait,  $libelleFrais,  $dateFrais,  $montantFrais)"
+Permet de mettre a jour dans la base de donnees un frais de type Hors Forfait
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$idFraisHorsForfait\fP : l'id du frais dans la base de donn�es 
+.br
+\fI$libelleFrais\fP : le libell�l� du frais 
+.br
+\fI$dateFrais\fP : la date du frais 
+.br
+\fI$montantFrais\fP : le montant du frais 
+.RE
+.PP
+
+.SS "majNbJustificatifs ( $idVisiteur,  $mois,  $nbJustificatifs)"
+Met à jour le nombre de justificatifs de la table ficheFrais pour le mois et le visiteur concerné
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$idVisiteur\fP ID du visiteur 
+.br
+\fI$mois\fP Mois sous la forme aaaamm 
+.br
+\fI$nbJustificatifs\fP Nombre de justificatifs
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+null 
+.RE
+.PP
+
+.SS "supprimerFraisHorsForfait ( $idFrais)"
+Supprime le frais hors forfait dont l'id est passé en argument
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$idFrais\fP ID du frais
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+null 
+.RE
+.PP
+
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour GSBfrais à partir du code source\&.

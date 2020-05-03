@@ -1,0 +1,54 @@
+.TH "index.php" 3 "Vendredi 24 Avril 2020" "Version 1" "GSBfrais" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+index.php
+.SH SYNOPSIS
+.br
+.PP
+.SS "Espaces de nommage"
+
+.in +1c
+.ti -1c
+.RI " \fBGSB\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fB$pdo\fP = \fBPdoGsb::getPdoGsb\fP()"
+.br
+.ti -1c
+.RI "\fB$estConnecte\fP = \fBestConnecte\fP()"
+.br
+.ti -1c
+.RI "\fB$viisiteurConnecter\fP = \fBestVisiteurConnecter\fP()"
+.br
+.ti -1c
+.RI "\fB$comptableConnecter\fP = \fBestComptableConnecter\fP()"
+.br
+.ti -1c
+.RI "\fB$uc\fP = filter_input(INPUT_GET, 'uc', FILTER_SANITIZE_STRING)"
+.br
+.ti -1c
+.RI "if($uc &&! $\fBestConnecte\fP) elseif(empty($uc)) \fBswitch\fP ( $uc)"
+.br
+.in -1c
+.SH "Documentation des variables"
+.PP 
+.SS "$comptableConnecter = \fBestComptableConnecter\fP()"
+
+.SS "$\fBestConnecte\fP = \fBestConnecte\fP()"
+
+.SS "$pdo = \fBPdoGsb::getPdoGsb\fP()"
+
+.SS "$uc = filter_input(INPUT_GET, 'uc', FILTER_SANITIZE_STRING)"
+
+.SS "$viisiteurConnecter = \fBestVisiteurConnecter\fP()"
+
+.SS "if ( $uc &&! $\fBestConnecte\fP) elseif (empty( $uc)) switch($uc)"
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour GSBfrais à partir du code source\&.

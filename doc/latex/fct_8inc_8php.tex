@@ -1,0 +1,310 @@
+\hypertarget{fct_8inc_8php}{}\doxysection{Référence du fichier includes/fct.inc.\+php}
+\label{fct_8inc_8php}\index{includes/fct.inc.php@{includes/fct.inc.php}}
+\doxysubsection*{Espaces de nommage}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_g_s_b}{G\+SB}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{fct_8inc_8php_a80ca5386d53e29b2b310cb83191a9b31}{est\+Connecte}} ()
+\item 
+\mbox{\hyperlink{fct_8inc_8php_ab57d6c4f9bd95e2484cd1fb61d1e0642}{connecter}} (\$id\+Visiteur, \$nom, \$prenom, \$statut)
+\item 
+\mbox{\hyperlink{fct_8inc_8php_a4d9cc75d1fa3fa8dc3739f4489183489}{deconnecter}} ()
+\item 
+\mbox{\hyperlink{fct_8inc_8php_ab9cb222b5275222fe9adc11dbbd997a3}{date\+Francais\+Vers\+Anglais}} (\$ma\+Date)
+\item 
+\mbox{\hyperlink{fct_8inc_8php_a6e0d8dd85362ba68b76db41db62e2499}{date\+Anglais\+Vers\+Francais}} (\$ma\+Date)
+\item 
+\mbox{\hyperlink{fct_8inc_8php_ac6b26dbc90d7a5ec71b0585ee0786a41}{get\+Mois}} (\$date)
+\item 
+\mbox{\hyperlink{fct_8inc_8php_a5891ac42bd25b5bb5a9427174f8eb15f}{est\+Entier\+Positif}} (\$valeur)
+\item 
+\mbox{\hyperlink{fct_8inc_8php_a464609600321021614adc67242caff02}{est\+Tableau\+Entiers}} (\$tab\+Entiers)
+\item 
+\mbox{\hyperlink{fct_8inc_8php_aa58c871e5f6cd7d51b1e8b88843f7fb1}{est\+Date\+Depassee}} (\$date\+Testee)
+\item 
+\mbox{\hyperlink{fct_8inc_8php_a7fa9e2b0f911f71f0dc3857201676f6e}{est\+Date\+Valide}} (\$date)
+\item 
+\mbox{\hyperlink{fct_8inc_8php_a5eaa55cf65e9070bec3a3966f5294f2a}{les\+Qte\+Frais\+Valides}} (\$les\+Frais)
+\item 
+\mbox{\hyperlink{fct_8inc_8php_a38c2c9e2e53aebdd24c6cce15666893f}{valide\+Infos\+Frais}} (\$date\+Frais, \$libelle, \$montant)
+\item 
+\mbox{\hyperlink{fct_8inc_8php_a9ebfa4d6e8d836827ddb02455281e5c1}{ajouter\+Erreur}} (\$msg)
+\item 
+\mbox{\hyperlink{fct_8inc_8php_abc3600d37e9484937ea976542eabec4b}{nb\+Erreurs}} ()
+\item 
+\mbox{\hyperlink{fct_8inc_8php_a8f51d69282218f165ef3115ae8c0800c}{est\+Visiteur\+Connecter}} ()
+\item 
+\mbox{\hyperlink{fct_8inc_8php_aabdaf36c31f3130c5bd134d1c779ffb6}{est\+Comptable\+Connecter}} ()
+\item 
+\mbox{\hyperlink{fct_8inc_8php_ad6a5e89decab3343df79335a9936a5c3}{get\+All\+Mois}} (\$mois)
+\item 
+\mbox{\hyperlink{fct_8inc_8php_aeeb91507878426d6313448a6bd1cad7c}{get\+Mois\+Precedent}} (\$mois)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{fct_8inc_8php_a9ebfa4d6e8d836827ddb02455281e5c1}\label{fct_8inc_8php_a9ebfa4d6e8d836827ddb02455281e5c1}} 
+\index{fct.inc.php@{fct.inc.php}!ajouterErreur@{ajouterErreur}}
+\index{ajouterErreur@{ajouterErreur}!fct.inc.php@{fct.inc.php}}
+\doxysubsubsection{\texorpdfstring{ajouterErreur()}{ajouterErreur()}}
+{\footnotesize\ttfamily ajouter\+Erreur (\begin{DoxyParamCaption}\item[{}]{\$msg }\end{DoxyParamCaption})}
+
+Ajoute le libellé d\textquotesingle{}une erreur au tableau des erreurs
+
+
+\begin{DoxyParams}[1]{Paramètres}
+String & {\em \$msg} & Libellé de l\textquotesingle{}erreur\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fct_8inc_8php_ab57d6c4f9bd95e2484cd1fb61d1e0642}\label{fct_8inc_8php_ab57d6c4f9bd95e2484cd1fb61d1e0642}} 
+\index{fct.inc.php@{fct.inc.php}!connecter@{connecter}}
+\index{connecter@{connecter}!fct.inc.php@{fct.inc.php}}
+\doxysubsubsection{\texorpdfstring{connecter()}{connecter()}}
+{\footnotesize\ttfamily connecter (\begin{DoxyParamCaption}\item[{}]{\$id\+Visiteur,  }\item[{}]{\$nom,  }\item[{}]{\$prenom,  }\item[{}]{\$statut }\end{DoxyParamCaption})}
+
+Enregistre dans une variable session les infos d\textquotesingle{}un visiteur
+
+
+\begin{DoxyParams}[1]{Paramètres}
+String & {\em \$id\+Visiteur} & ID du visiteur \\
+\hline
+String & {\em \$nom} & Nom du visiteur \\
+\hline
+String & {\em \$prenom} & Prénom du visiteur \\
+\hline
+String & {\em \$statut} & le statue de l\textquotesingle{}utilisateur (comptable ou utilisateur) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fct_8inc_8php_a6e0d8dd85362ba68b76db41db62e2499}\label{fct_8inc_8php_a6e0d8dd85362ba68b76db41db62e2499}} 
+\index{fct.inc.php@{fct.inc.php}!dateAnglaisVersFrancais@{dateAnglaisVersFrancais}}
+\index{dateAnglaisVersFrancais@{dateAnglaisVersFrancais}!fct.inc.php@{fct.inc.php}}
+\doxysubsubsection{\texorpdfstring{dateAnglaisVersFrancais()}{dateAnglaisVersFrancais()}}
+{\footnotesize\ttfamily date\+Anglais\+Vers\+Francais (\begin{DoxyParamCaption}\item[{}]{\$ma\+Date }\end{DoxyParamCaption})}
+
+Transforme une date au format format anglais aaaa-\/mm-\/jj vers le format français jj/mm/aaaa
+
+
+\begin{DoxyParams}[1]{Paramètres}
+String & {\em \$ma\+Date} & au format aaaa-\/mm-\/jj\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Date au format format français jj/mm/aaaa 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fct_8inc_8php_ab9cb222b5275222fe9adc11dbbd997a3}\label{fct_8inc_8php_ab9cb222b5275222fe9adc11dbbd997a3}} 
+\index{fct.inc.php@{fct.inc.php}!dateFrancaisVersAnglais@{dateFrancaisVersAnglais}}
+\index{dateFrancaisVersAnglais@{dateFrancaisVersAnglais}!fct.inc.php@{fct.inc.php}}
+\doxysubsubsection{\texorpdfstring{dateFrancaisVersAnglais()}{dateFrancaisVersAnglais()}}
+{\footnotesize\ttfamily date\+Francais\+Vers\+Anglais (\begin{DoxyParamCaption}\item[{}]{\$ma\+Date }\end{DoxyParamCaption})}
+
+Transforme une date au format français jj/mm/aaaa vers le format anglais aaaa-\/mm-\/jj
+
+
+\begin{DoxyParams}[1]{Paramètres}
+String & {\em \$ma\+Date} & au format jj/mm/aaaa\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Date au format anglais aaaa-\/mm-\/jj 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fct_8inc_8php_a4d9cc75d1fa3fa8dc3739f4489183489}\label{fct_8inc_8php_a4d9cc75d1fa3fa8dc3739f4489183489}} 
+\index{fct.inc.php@{fct.inc.php}!deconnecter@{deconnecter}}
+\index{deconnecter@{deconnecter}!fct.inc.php@{fct.inc.php}}
+\doxysubsubsection{\texorpdfstring{deconnecter()}{deconnecter()}}
+{\footnotesize\ttfamily deconnecter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Détruit la session active
+
+\begin{DoxyReturn}{Renvoie}
+null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fct_8inc_8php_aabdaf36c31f3130c5bd134d1c779ffb6}\label{fct_8inc_8php_aabdaf36c31f3130c5bd134d1c779ffb6}} 
+\index{fct.inc.php@{fct.inc.php}!estComptableConnecter@{estComptableConnecter}}
+\index{estComptableConnecter@{estComptableConnecter}!fct.inc.php@{fct.inc.php}}
+\doxysubsubsection{\texorpdfstring{estComptableConnecter()}{estComptableConnecter()}}
+{\footnotesize\ttfamily est\+Comptable\+Connecter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+renvoie le statut=visiteur si l\textquotesingle{}utilisateur est connect� et est de type comptable \mbox{\Hypertarget{fct_8inc_8php_a80ca5386d53e29b2b310cb83191a9b31}\label{fct_8inc_8php_a80ca5386d53e29b2b310cb83191a9b31}} 
+\index{fct.inc.php@{fct.inc.php}!estConnecte@{estConnecte}}
+\index{estConnecte@{estConnecte}!fct.inc.php@{fct.inc.php}}
+\doxysubsubsection{\texorpdfstring{estConnecte()}{estConnecte()}}
+{\footnotesize\ttfamily est\+Connecte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Teste si un quelconque visiteur est connecté
+
+\begin{DoxyReturn}{Renvoie}
+vrai ou faux 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fct_8inc_8php_aa58c871e5f6cd7d51b1e8b88843f7fb1}\label{fct_8inc_8php_aa58c871e5f6cd7d51b1e8b88843f7fb1}} 
+\index{fct.inc.php@{fct.inc.php}!estDateDepassee@{estDateDepassee}}
+\index{estDateDepassee@{estDateDepassee}!fct.inc.php@{fct.inc.php}}
+\doxysubsubsection{\texorpdfstring{estDateDepassee()}{estDateDepassee()}}
+{\footnotesize\ttfamily est\+Date\+Depassee (\begin{DoxyParamCaption}\item[{}]{\$date\+Testee }\end{DoxyParamCaption})}
+
+Vérifie si une date est inférieure d\textquotesingle{}un an à la date actuelle
+
+
+\begin{DoxyParams}[1]{Paramètres}
+String & {\em \$date\+Testee} & Date à tester\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Boolean vrai ou faux 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fct_8inc_8php_a7fa9e2b0f911f71f0dc3857201676f6e}\label{fct_8inc_8php_a7fa9e2b0f911f71f0dc3857201676f6e}} 
+\index{fct.inc.php@{fct.inc.php}!estDateValide@{estDateValide}}
+\index{estDateValide@{estDateValide}!fct.inc.php@{fct.inc.php}}
+\doxysubsubsection{\texorpdfstring{estDateValide()}{estDateValide()}}
+{\footnotesize\ttfamily est\+Date\+Valide (\begin{DoxyParamCaption}\item[{}]{\$date }\end{DoxyParamCaption})}
+
+Vérifie la validité du format d\textquotesingle{}une date française jj/mm/aaaa
+
+
+\begin{DoxyParams}[1]{Paramètres}
+String & {\em \$date} & Date à tester\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Boolean vrai ou faux 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fct_8inc_8php_a5891ac42bd25b5bb5a9427174f8eb15f}\label{fct_8inc_8php_a5891ac42bd25b5bb5a9427174f8eb15f}} 
+\index{fct.inc.php@{fct.inc.php}!estEntierPositif@{estEntierPositif}}
+\index{estEntierPositif@{estEntierPositif}!fct.inc.php@{fct.inc.php}}
+\doxysubsubsection{\texorpdfstring{estEntierPositif()}{estEntierPositif()}}
+{\footnotesize\ttfamily est\+Entier\+Positif (\begin{DoxyParamCaption}\item[{}]{\$valeur }\end{DoxyParamCaption})}
+
+Indique si une valeur est un entier positif ou nul
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Integer & {\em \$valeur} & Valeur\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Boolean vrai ou faux 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fct_8inc_8php_a464609600321021614adc67242caff02}\label{fct_8inc_8php_a464609600321021614adc67242caff02}} 
+\index{fct.inc.php@{fct.inc.php}!estTableauEntiers@{estTableauEntiers}}
+\index{estTableauEntiers@{estTableauEntiers}!fct.inc.php@{fct.inc.php}}
+\doxysubsubsection{\texorpdfstring{estTableauEntiers()}{estTableauEntiers()}}
+{\footnotesize\ttfamily est\+Tableau\+Entiers (\begin{DoxyParamCaption}\item[{}]{\$tab\+Entiers }\end{DoxyParamCaption})}
+
+Indique si un tableau de valeurs est constitué d\textquotesingle{}entiers positifs ou nuls
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Array & {\em \$tab\+Entiers} & Un tableau d\textquotesingle{}entier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Boolean vrai ou faux 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fct_8inc_8php_a8f51d69282218f165ef3115ae8c0800c}\label{fct_8inc_8php_a8f51d69282218f165ef3115ae8c0800c}} 
+\index{fct.inc.php@{fct.inc.php}!estVisiteurConnecter@{estVisiteurConnecter}}
+\index{estVisiteurConnecter@{estVisiteurConnecter}!fct.inc.php@{fct.inc.php}}
+\doxysubsubsection{\texorpdfstring{estVisiteurConnecter()}{estVisiteurConnecter()}}
+{\footnotesize\ttfamily est\+Visiteur\+Connecter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+renvoie le statut=visiteur si l\textquotesingle{}utilisateur est connect� et est de type visiteur \mbox{\Hypertarget{fct_8inc_8php_ad6a5e89decab3343df79335a9936a5c3}\label{fct_8inc_8php_ad6a5e89decab3343df79335a9936a5c3}} 
+\index{fct.inc.php@{fct.inc.php}!getAllMois@{getAllMois}}
+\index{getAllMois@{getAllMois}!fct.inc.php@{fct.inc.php}}
+\doxysubsubsection{\texorpdfstring{getAllMois()}{getAllMois()}}
+{\footnotesize\ttfamily get\+All\+Mois (\begin{DoxyParamCaption}\item[{}]{\$mois }\end{DoxyParamCaption})}
+
+Permet de recuperer les douze derniere moi avant un moi donner 
+\begin{DoxyParams}[1]{Paramètres}
+string & {\em \$mois,} & Le mois de depart \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+array \$les\+Mois\+: Un tableau contenant comme clees mois/num\+Annee/num\+Mois 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fct_8inc_8php_ac6b26dbc90d7a5ec71b0585ee0786a41}\label{fct_8inc_8php_ac6b26dbc90d7a5ec71b0585ee0786a41}} 
+\index{fct.inc.php@{fct.inc.php}!getMois@{getMois}}
+\index{getMois@{getMois}!fct.inc.php@{fct.inc.php}}
+\doxysubsubsection{\texorpdfstring{getMois()}{getMois()}}
+{\footnotesize\ttfamily get\+Mois (\begin{DoxyParamCaption}\item[{}]{\$date }\end{DoxyParamCaption})}
+
+Retourne le mois au format aaaamm selon le jour dans le mois
+
+
+\begin{DoxyParams}[1]{Paramètres}
+String & {\em \$date} & au format jj/mm/aaaa\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+String Mois au format aaaamm 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fct_8inc_8php_aeeb91507878426d6313448a6bd1cad7c}\label{fct_8inc_8php_aeeb91507878426d6313448a6bd1cad7c}} 
+\index{fct.inc.php@{fct.inc.php}!getMoisPrecedent@{getMoisPrecedent}}
+\index{getMoisPrecedent@{getMoisPrecedent}!fct.inc.php@{fct.inc.php}}
+\doxysubsubsection{\texorpdfstring{getMoisPrecedent()}{getMoisPrecedent()}}
+{\footnotesize\ttfamily get\+Mois\+Precedent (\begin{DoxyParamCaption}\item[{}]{\$mois }\end{DoxyParamCaption})}
+
+renvoie le mois precedent 
+\begin{DoxyParams}{Paramètres}
+{\em string} & un mois sous forme de string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+string\+: le mois precedent 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fct_8inc_8php_a5eaa55cf65e9070bec3a3966f5294f2a}\label{fct_8inc_8php_a5eaa55cf65e9070bec3a3966f5294f2a}} 
+\index{fct.inc.php@{fct.inc.php}!lesQteFraisValides@{lesQteFraisValides}}
+\index{lesQteFraisValides@{lesQteFraisValides}!fct.inc.php@{fct.inc.php}}
+\doxysubsubsection{\texorpdfstring{lesQteFraisValides()}{lesQteFraisValides()}}
+{\footnotesize\ttfamily les\+Qte\+Frais\+Valides (\begin{DoxyParamCaption}\item[{}]{\$les\+Frais }\end{DoxyParamCaption})}
+
+Vérifie que le tableau de frais ne contient que des valeurs numériques
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Array & {\em \$les\+Frais} & Tableau d\textquotesingle{}entier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Boolean vrai ou faux 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fct_8inc_8php_abc3600d37e9484937ea976542eabec4b}\label{fct_8inc_8php_abc3600d37e9484937ea976542eabec4b}} 
+\index{fct.inc.php@{fct.inc.php}!nbErreurs@{nbErreurs}}
+\index{nbErreurs@{nbErreurs}!fct.inc.php@{fct.inc.php}}
+\doxysubsubsection{\texorpdfstring{nbErreurs()}{nbErreurs()}}
+{\footnotesize\ttfamily nb\+Erreurs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retoune le nombre de lignes du tableau des erreurs
+
+\begin{DoxyReturn}{Renvoie}
+Integer le nombre d\textquotesingle{}erreurs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fct_8inc_8php_a38c2c9e2e53aebdd24c6cce15666893f}\label{fct_8inc_8php_a38c2c9e2e53aebdd24c6cce15666893f}} 
+\index{fct.inc.php@{fct.inc.php}!valideInfosFrais@{valideInfosFrais}}
+\index{valideInfosFrais@{valideInfosFrais}!fct.inc.php@{fct.inc.php}}
+\doxysubsubsection{\texorpdfstring{valideInfosFrais()}{valideInfosFrais()}}
+{\footnotesize\ttfamily valide\+Infos\+Frais (\begin{DoxyParamCaption}\item[{}]{\$date\+Frais,  }\item[{}]{\$libelle,  }\item[{}]{\$montant }\end{DoxyParamCaption})}
+
+Vérifie la validité des trois arguments \+: la date, le libellé du frais et le montant
+
+Des message d\textquotesingle{}erreurs sont ajoutés au tableau des erreurs
+
+
+\begin{DoxyParams}[1]{Paramètres}
+String & {\em \$date\+Frais} & Date des frais \\
+\hline
+String & {\em \$libelle} & Libellé des frais \\
+\hline
+Float & {\em \$montant} & Montant des frais\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+null 
+\end{DoxyReturn}

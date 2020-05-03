@@ -1,0 +1,242 @@
+.TH "tests/gendatas/fonctions.php" 3 "Vendredi 24 Avril 2020" "Version 1" "GSBfrais" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tests/gendatas/fonctions.php
+.SH SYNOPSIS
+.br
+.PP
+.SS "Espaces de nommage"
+
+.in +1c
+.ti -1c
+.RI " \fBGSB\fP"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBgetLesVisiteurs\fP ($pdo)"
+.br
+.ti -1c
+.RI "\fBgetNbTable\fP ($pdo, $table)"
+.br
+.ti -1c
+.RI "\fBgetLesFichesFrais\fP ($pdo)"
+.br
+.ti -1c
+.RI "\fBgetLesIdFraisForfait\fP ($pdo)"
+.br
+.ti -1c
+.RI "\fBgetMoisSuivant\fP ($mois)"
+.br
+.ti -1c
+.RI "\fBgetMoisPrecedent\fP ($mois)"
+.br
+.ti -1c
+.RI "\fBcreationFichesFrais\fP ($pdo)"
+.br
+.ti -1c
+.RI "\fBcreationFraisForfait\fP ($pdo)"
+.br
+.ti -1c
+.RI "\fBgetDesFraisHorsForfait\fP ()"
+.br
+.ti -1c
+.RI "\fBupdateMdpVisiteur\fP ($pdo)"
+.br
+.ti -1c
+.RI "\fBcreationFraisHorsForfait\fP ($pdo)"
+.br
+.ti -1c
+.RI "\fBgetMois\fP ($date)"
+.br
+.ti -1c
+.RI "\fBmajFicheFrais\fP ($pdo)"
+.br
+.in -1c
+.SH "Documentation des fonctions"
+.PP 
+.SS "creationFichesFrais ( $pdo)"
+Fonction qui crée les fiches de frais (via des INSERT SQL)
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$pdo\fP instance de la classe PDO utilisée pour se connecter
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+null 
+.RE
+.PP
+
+.SS "creationFraisForfait ( $pdo)"
+Fonction qui crée des lignes de frais au forfait (via des INSERT SQL)
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$pdo\fP instance de la classe PDO utilisée pour se connecter
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+null 
+.RE
+.PP
+
+.SS "creationFraisHorsForfait ( $pdo)"
+Fonction qui crée des lignes de frais hors forfait (via des INSERT SQL)
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$pdo\fP instance de la classe PDO utilisée pour se connecter
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+null 
+.RE
+.PP
+
+.SS "getDesFraisHorsForfait ()"
+Fonction qui retourne des exmples de frais hors forfait pour de la génération aléatoire
+.PP
+\fBRenvoie\fP
+.RS 4
+Array d'exemples de frais hors forfait 
+.RE
+.PP
+
+.SS "getLesFichesFrais ( $pdo)"
+Fonction qui retourne la liste des fiches de frais
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$pdo\fP instance de la classe PDO utilisée pour se connecter
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Array de fiches de frais 
+.RE
+.PP
+
+.SS "getLesIdFraisForfait ( $pdo)"
+Fonction qui retourne les id des fiches de frais
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$pdo\fP instance de la classe PDO utilisée pour se connecter
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Array de id de fiches de frais 
+.RE
+.PP
+
+.SS "getLesVisiteurs ( $pdo)"
+Fonction qui retourne la liste des visiteurs
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$pdo\fP instance de la classe PDO utilisée pour se connecter
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Array de visiteurs 
+.RE
+.PP
+
+.SS "getMois ( $date)"
+Fonction qui retourne le mois (au format ID \fBGSB\fP : aaaamm) à partir d'une date passée en paramètre
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$date\fP Date à utiliser pour extraire le mois
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+String avec le mois au format aaaamm 
+.RE
+.PP
+
+.SS "getMoisPrecedent ( $mois)"
+Fonction qui retourne le mois précédent un mois passé en paramètre
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$mois\fP Contient le mois à utiliser
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+String le mois d'avant 
+.RE
+.PP
+
+.SS "getMoisSuivant ( $mois)"
+Fonction qui retourne le mois suivant un mois passé en paramètre
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$mois\fP Contient le mois à utiliser
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+String le mois d'après 
+.RE
+.PP
+
+.SS "getNbTable ( $pdo,  $table)"
+Fonction générique qui retourne le nombre d'enregistrements d'une table
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$pdo\fP Instance de la classe PDO utilisée pour se connecter 
+.br
+\fI$table\fP Nom de la table que l'on veut utiliser
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Integer avec le nombre d'enregistrements 
+.RE
+.PP
+
+.SS "majFicheFrais ( $pdo)"
+Fonction qui met à jour les montants des fiches de frais (via des UPDATE SQL)
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$pdo\fP instance de la classe PDO utilisée pour se connecter
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+null 
+.RE
+.PP
+
+.SS "updateMdpVisiteur ( $pdo)"
+Fonction qui met à jour les mots de passe des visisteurs avec des mots de pass aléatoire
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$pdo\fP instance de la classe PDO utilisée pour se connecter
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+null 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour GSBfrais à partir du code source\&.

@@ -1,0 +1,59 @@
+.TH "controleurs/c_gererFrais.php" 3 "Vendredi 24 Avril 2020" "Version 1" "GSBfrais" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+controleurs/c_gererFrais.php
+.SH SYNOPSIS
+.br
+.PP
+.SS "Espaces de nommage"
+
+.in +1c
+.ti -1c
+.RI " \fBGSB\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fB$idVisiteur\fP = $_SESSION['idVisiteur']"
+.br
+.ti -1c
+.RI "\fB$mois\fP = \fBgetMois\fP(date('d/m/Y'))"
+.br
+.ti -1c
+.RI "\fB$numAnnee\fP = substr($mois, 0, 4)"
+.br
+.ti -1c
+.RI "\fB$numMois\fP = substr($mois, 4, 2)"
+.br
+.ti -1c
+.RI "\fB$action\fP = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING)"
+.br
+.ti -1c
+.RI "\fBswitch\fP($action) \fB$lesFraisHorsForfait\fP = $pdo\->getLesFraisHorsForfait($idVisiteur, $mois)"
+.br
+.ti -1c
+.RI "\fB$lesFraisForfait\fP = $pdo\->getLesFraisForfait($idVisiteur, $mois)"
+.br
+.in -1c
+.SH "Documentation des variables"
+.PP 
+.SS "$action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING)"
+
+.SS "$idVisiteur = $_SESSION['idVisiteur']"
+
+.SS "$lesFraisForfait = $pdo\->getLesFraisForfait($idVisiteur, $mois)"
+
+.SS "\fBswitch\fP ( $action) $lesFraisHorsForfait = $pdo\->getLesFraisHorsForfait($idVisiteur, $mois)"
+
+.SS "$mois = \fBgetMois\fP(date('d/m/Y'))"
+
+.SS "$numAnnee = substr($mois, 0, 4)"
+
+.SS "$numMois = substr($mois, 4, 2)"
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour GSBfrais à partir du code source\&.

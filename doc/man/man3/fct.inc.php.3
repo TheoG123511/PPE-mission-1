@@ -1,0 +1,303 @@
+.TH "includes/fct.inc.php" 3 "Vendredi 24 Avril 2020" "Version 1" "GSBfrais" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+includes/fct.inc.php
+.SH SYNOPSIS
+.br
+.PP
+.SS "Espaces de nommage"
+
+.in +1c
+.ti -1c
+.RI " \fBGSB\fP"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBestConnecte\fP ()"
+.br
+.ti -1c
+.RI "\fBconnecter\fP ($idVisiteur, $nom, $prenom, $statut)"
+.br
+.ti -1c
+.RI "\fBdeconnecter\fP ()"
+.br
+.ti -1c
+.RI "\fBdateFrancaisVersAnglais\fP ($maDate)"
+.br
+.ti -1c
+.RI "\fBdateAnglaisVersFrancais\fP ($maDate)"
+.br
+.ti -1c
+.RI "\fBgetMois\fP ($date)"
+.br
+.ti -1c
+.RI "\fBestEntierPositif\fP ($valeur)"
+.br
+.ti -1c
+.RI "\fBestTableauEntiers\fP ($tabEntiers)"
+.br
+.ti -1c
+.RI "\fBestDateDepassee\fP ($dateTestee)"
+.br
+.ti -1c
+.RI "\fBestDateValide\fP ($date)"
+.br
+.ti -1c
+.RI "\fBlesQteFraisValides\fP ($lesFrais)"
+.br
+.ti -1c
+.RI "\fBvalideInfosFrais\fP ($dateFrais, $libelle, $montant)"
+.br
+.ti -1c
+.RI "\fBajouterErreur\fP ($msg)"
+.br
+.ti -1c
+.RI "\fBnbErreurs\fP ()"
+.br
+.ti -1c
+.RI "\fBestVisiteurConnecter\fP ()"
+.br
+.ti -1c
+.RI "\fBestComptableConnecter\fP ()"
+.br
+.ti -1c
+.RI "\fBgetAllMois\fP ($mois)"
+.br
+.ti -1c
+.RI "\fBgetMoisPrecedent\fP ($mois)"
+.br
+.in -1c
+.SH "Documentation des fonctions"
+.PP 
+.SS "ajouterErreur ( $msg)"
+Ajoute le libellé d'une erreur au tableau des erreurs
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$msg\fP Libellé de l'erreur
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+null 
+.RE
+.PP
+
+.SS "connecter ( $idVisiteur,  $nom,  $prenom,  $statut)"
+Enregistre dans une variable session les infos d'un visiteur
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$idVisiteur\fP ID du visiteur 
+.br
+\fI$nom\fP Nom du visiteur 
+.br
+\fI$prenom\fP Prénom du visiteur 
+.br
+\fI$statut\fP le statue de l'utilisateur (comptable ou utilisateur) 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+null 
+.RE
+.PP
+
+.SS "dateAnglaisVersFrancais ( $maDate)"
+Transforme une date au format format anglais aaaa-mm-jj vers le format français jj/mm/aaaa
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$maDate\fP au format aaaa-mm-jj
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Date au format format français jj/mm/aaaa 
+.RE
+.PP
+
+.SS "dateFrancaisVersAnglais ( $maDate)"
+Transforme une date au format français jj/mm/aaaa vers le format anglais aaaa-mm-jj
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$maDate\fP au format jj/mm/aaaa
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Date au format anglais aaaa-mm-jj 
+.RE
+.PP
+
+.SS "deconnecter ()"
+Détruit la session active
+.PP
+\fBRenvoie\fP
+.RS 4
+null 
+.RE
+.PP
+
+.SS "estComptableConnecter ()"
+renvoie le statut=visiteur si l'utilisateur est connect� et est de type comptable 
+.SS "estConnecte ()"
+Teste si un quelconque visiteur est connecté
+.PP
+\fBRenvoie\fP
+.RS 4
+vrai ou faux 
+.RE
+.PP
+
+.SS "estDateDepassee ( $dateTestee)"
+Vérifie si une date est inférieure d'un an à la date actuelle
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$dateTestee\fP Date à tester
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Boolean vrai ou faux 
+.RE
+.PP
+
+.SS "estDateValide ( $date)"
+Vérifie la validité du format d'une date française jj/mm/aaaa
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$date\fP Date à tester
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Boolean vrai ou faux 
+.RE
+.PP
+
+.SS "estEntierPositif ( $valeur)"
+Indique si une valeur est un entier positif ou nul
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$valeur\fP Valeur
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Boolean vrai ou faux 
+.RE
+.PP
+
+.SS "estTableauEntiers ( $tabEntiers)"
+Indique si un tableau de valeurs est constitué d'entiers positifs ou nuls
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$tabEntiers\fP Un tableau d'entier
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Boolean vrai ou faux 
+.RE
+.PP
+
+.SS "estVisiteurConnecter ()"
+renvoie le statut=visiteur si l'utilisateur est connect� et est de type visiteur 
+.SS "getAllMois ( $mois)"
+Permet de recuperer les douze derniere moi avant un moi donner 
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$mois,\fP Le mois de depart 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+array $lesMois: Un tableau contenant comme clees mois/numAnnee/numMois 
+.RE
+.PP
+
+.SS "getMois ( $date)"
+Retourne le mois au format aaaamm selon le jour dans le mois
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$date\fP au format jj/mm/aaaa
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+String Mois au format aaaamm 
+.RE
+.PP
+
+.SS "getMoisPrecedent ( $mois)"
+renvoie le mois precedent 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstring\fP un mois sous forme de string 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+string: le mois precedent 
+.RE
+.PP
+
+.SS "lesQteFraisValides ( $lesFrais)"
+Vérifie que le tableau de frais ne contient que des valeurs numériques
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$lesFrais\fP Tableau d'entier
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Boolean vrai ou faux 
+.RE
+.PP
+
+.SS "nbErreurs ()"
+Retoune le nombre de lignes du tableau des erreurs
+.PP
+\fBRenvoie\fP
+.RS 4
+Integer le nombre d'erreurs 
+.RE
+.PP
+
+.SS "valideInfosFrais ( $dateFrais,  $libelle,  $montant)"
+Vérifie la validité des trois arguments : la date, le libellé du frais et le montant
+.PP
+Des message d'erreurs sont ajoutés au tableau des erreurs
+.PP
+\fBParamètres\fP
+.RS 4
+\fI$dateFrais\fP Date des frais 
+.br
+\fI$libelle\fP Libellé des frais 
+.br
+\fI$montant\fP Montant des frais
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+null 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour GSBfrais à partir du code source\&.

@@ -1,0 +1,244 @@
+\hypertarget{fonctions_8php}{}\doxysection{Référence du fichier tests/gendatas/fonctions.php}
+\label{fonctions_8php}\index{tests/gendatas/fonctions.php@{tests/gendatas/fonctions.php}}
+\doxysubsection*{Espaces de nommage}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_g_s_b}{G\+SB}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{fonctions_8php_a2acfd2dba761253597a1ab45974a0960}{get\+Les\+Visiteurs}} (\$pdo)
+\item 
+\mbox{\hyperlink{fonctions_8php_a673120bc1f5b1c86025f63d160c0aa9b}{get\+Nb\+Table}} (\$pdo, \$table)
+\item 
+\mbox{\hyperlink{fonctions_8php_a4ddda167f959ca116a8a3e6eeb90fa9e}{get\+Les\+Fiches\+Frais}} (\$pdo)
+\item 
+\mbox{\hyperlink{fonctions_8php_a6308942d3ba830a09e7e94ae7711e484}{get\+Les\+Id\+Frais\+Forfait}} (\$pdo)
+\item 
+\mbox{\hyperlink{fonctions_8php_a645aa8a245cbeb2d0d167fcc942b9b5c}{get\+Mois\+Suivant}} (\$mois)
+\item 
+\mbox{\hyperlink{fonctions_8php_aeeb91507878426d6313448a6bd1cad7c}{get\+Mois\+Precedent}} (\$mois)
+\item 
+\mbox{\hyperlink{fonctions_8php_aaa271411c3446ad3c57a1429136fc1bf}{creation\+Fiches\+Frais}} (\$pdo)
+\item 
+\mbox{\hyperlink{fonctions_8php_a15cec1f321241d0de7115e96cfccf67f}{creation\+Frais\+Forfait}} (\$pdo)
+\item 
+\mbox{\hyperlink{fonctions_8php_ae0eddc9c28d0ed7a68aa28fa98a6f214}{get\+Des\+Frais\+Hors\+Forfait}} ()
+\item 
+\mbox{\hyperlink{fonctions_8php_ad1a28b1457da19e4210dfa8869d1c874}{update\+Mdp\+Visiteur}} (\$pdo)
+\item 
+\mbox{\hyperlink{fonctions_8php_ad980a8fa84e6aee8092ec6525bf1cd5a}{creation\+Frais\+Hors\+Forfait}} (\$pdo)
+\item 
+\mbox{\hyperlink{fonctions_8php_ac6b26dbc90d7a5ec71b0585ee0786a41}{get\+Mois}} (\$date)
+\item 
+\mbox{\hyperlink{fonctions_8php_a737fc7684b15055a48683ee1f6683b5b}{maj\+Fiche\+Frais}} (\$pdo)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{fonctions_8php_aaa271411c3446ad3c57a1429136fc1bf}\label{fonctions_8php_aaa271411c3446ad3c57a1429136fc1bf}} 
+\index{fonctions.php@{fonctions.php}!creationFichesFrais@{creationFichesFrais}}
+\index{creationFichesFrais@{creationFichesFrais}!fonctions.php@{fonctions.php}}
+\doxysubsubsection{\texorpdfstring{creationFichesFrais()}{creationFichesFrais()}}
+{\footnotesize\ttfamily creation\+Fiches\+Frais (\begin{DoxyParamCaption}\item[{}]{\$pdo }\end{DoxyParamCaption})}
+
+Fonction qui crée les fiches de frais (via des I\+N\+S\+E\+RT S\+QL)
+
+
+\begin{DoxyParams}[1]{Paramètres}
+P\+DO & {\em \$pdo} & instance de la classe P\+DO utilisée pour se connecter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8php_a15cec1f321241d0de7115e96cfccf67f}\label{fonctions_8php_a15cec1f321241d0de7115e96cfccf67f}} 
+\index{fonctions.php@{fonctions.php}!creationFraisForfait@{creationFraisForfait}}
+\index{creationFraisForfait@{creationFraisForfait}!fonctions.php@{fonctions.php}}
+\doxysubsubsection{\texorpdfstring{creationFraisForfait()}{creationFraisForfait()}}
+{\footnotesize\ttfamily creation\+Frais\+Forfait (\begin{DoxyParamCaption}\item[{}]{\$pdo }\end{DoxyParamCaption})}
+
+Fonction qui crée des lignes de frais au forfait (via des I\+N\+S\+E\+RT S\+QL)
+
+
+\begin{DoxyParams}[1]{Paramètres}
+P\+DO & {\em \$pdo} & instance de la classe P\+DO utilisée pour se connecter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8php_ad980a8fa84e6aee8092ec6525bf1cd5a}\label{fonctions_8php_ad980a8fa84e6aee8092ec6525bf1cd5a}} 
+\index{fonctions.php@{fonctions.php}!creationFraisHorsForfait@{creationFraisHorsForfait}}
+\index{creationFraisHorsForfait@{creationFraisHorsForfait}!fonctions.php@{fonctions.php}}
+\doxysubsubsection{\texorpdfstring{creationFraisHorsForfait()}{creationFraisHorsForfait()}}
+{\footnotesize\ttfamily creation\+Frais\+Hors\+Forfait (\begin{DoxyParamCaption}\item[{}]{\$pdo }\end{DoxyParamCaption})}
+
+Fonction qui crée des lignes de frais hors forfait (via des I\+N\+S\+E\+RT S\+QL)
+
+
+\begin{DoxyParams}[1]{Paramètres}
+P\+DO & {\em \$pdo} & instance de la classe P\+DO utilisée pour se connecter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8php_ae0eddc9c28d0ed7a68aa28fa98a6f214}\label{fonctions_8php_ae0eddc9c28d0ed7a68aa28fa98a6f214}} 
+\index{fonctions.php@{fonctions.php}!getDesFraisHorsForfait@{getDesFraisHorsForfait}}
+\index{getDesFraisHorsForfait@{getDesFraisHorsForfait}!fonctions.php@{fonctions.php}}
+\doxysubsubsection{\texorpdfstring{getDesFraisHorsForfait()}{getDesFraisHorsForfait()}}
+{\footnotesize\ttfamily get\+Des\+Frais\+Hors\+Forfait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fonction qui retourne des exmples de frais hors forfait pour de la génération aléatoire
+
+\begin{DoxyReturn}{Renvoie}
+Array d\textquotesingle{}exemples de frais hors forfait 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8php_a4ddda167f959ca116a8a3e6eeb90fa9e}\label{fonctions_8php_a4ddda167f959ca116a8a3e6eeb90fa9e}} 
+\index{fonctions.php@{fonctions.php}!getLesFichesFrais@{getLesFichesFrais}}
+\index{getLesFichesFrais@{getLesFichesFrais}!fonctions.php@{fonctions.php}}
+\doxysubsubsection{\texorpdfstring{getLesFichesFrais()}{getLesFichesFrais()}}
+{\footnotesize\ttfamily get\+Les\+Fiches\+Frais (\begin{DoxyParamCaption}\item[{}]{\$pdo }\end{DoxyParamCaption})}
+
+Fonction qui retourne la liste des fiches de frais
+
+
+\begin{DoxyParams}[1]{Paramètres}
+P\+DO & {\em \$pdo} & instance de la classe P\+DO utilisée pour se connecter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Array de fiches de frais 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8php_a6308942d3ba830a09e7e94ae7711e484}\label{fonctions_8php_a6308942d3ba830a09e7e94ae7711e484}} 
+\index{fonctions.php@{fonctions.php}!getLesIdFraisForfait@{getLesIdFraisForfait}}
+\index{getLesIdFraisForfait@{getLesIdFraisForfait}!fonctions.php@{fonctions.php}}
+\doxysubsubsection{\texorpdfstring{getLesIdFraisForfait()}{getLesIdFraisForfait()}}
+{\footnotesize\ttfamily get\+Les\+Id\+Frais\+Forfait (\begin{DoxyParamCaption}\item[{}]{\$pdo }\end{DoxyParamCaption})}
+
+Fonction qui retourne les id des fiches de frais
+
+
+\begin{DoxyParams}[1]{Paramètres}
+P\+DO & {\em \$pdo} & instance de la classe P\+DO utilisée pour se connecter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Array de id de fiches de frais 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8php_a2acfd2dba761253597a1ab45974a0960}\label{fonctions_8php_a2acfd2dba761253597a1ab45974a0960}} 
+\index{fonctions.php@{fonctions.php}!getLesVisiteurs@{getLesVisiteurs}}
+\index{getLesVisiteurs@{getLesVisiteurs}!fonctions.php@{fonctions.php}}
+\doxysubsubsection{\texorpdfstring{getLesVisiteurs()}{getLesVisiteurs()}}
+{\footnotesize\ttfamily get\+Les\+Visiteurs (\begin{DoxyParamCaption}\item[{}]{\$pdo }\end{DoxyParamCaption})}
+
+Fonction qui retourne la liste des visiteurs
+
+
+\begin{DoxyParams}[1]{Paramètres}
+P\+DO & {\em \$pdo} & instance de la classe P\+DO utilisée pour se connecter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Array de visiteurs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8php_ac6b26dbc90d7a5ec71b0585ee0786a41}\label{fonctions_8php_ac6b26dbc90d7a5ec71b0585ee0786a41}} 
+\index{fonctions.php@{fonctions.php}!getMois@{getMois}}
+\index{getMois@{getMois}!fonctions.php@{fonctions.php}}
+\doxysubsubsection{\texorpdfstring{getMois()}{getMois()}}
+{\footnotesize\ttfamily get\+Mois (\begin{DoxyParamCaption}\item[{}]{\$date }\end{DoxyParamCaption})}
+
+Fonction qui retourne le mois (au format ID \mbox{\hyperlink{namespace_g_s_b}{G\+SB}} \+: aaaamm) à partir d\textquotesingle{}une date passée en paramètre
+
+
+\begin{DoxyParams}[1]{Paramètres}
+String & {\em \$date} & Date à utiliser pour extraire le mois\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+String avec le mois au format aaaamm 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8php_aeeb91507878426d6313448a6bd1cad7c}\label{fonctions_8php_aeeb91507878426d6313448a6bd1cad7c}} 
+\index{fonctions.php@{fonctions.php}!getMoisPrecedent@{getMoisPrecedent}}
+\index{getMoisPrecedent@{getMoisPrecedent}!fonctions.php@{fonctions.php}}
+\doxysubsubsection{\texorpdfstring{getMoisPrecedent()}{getMoisPrecedent()}}
+{\footnotesize\ttfamily get\+Mois\+Precedent (\begin{DoxyParamCaption}\item[{}]{\$mois }\end{DoxyParamCaption})}
+
+Fonction qui retourne le mois précédent un mois passé en paramètre
+
+
+\begin{DoxyParams}[1]{Paramètres}
+String & {\em \$mois} & Contient le mois à utiliser\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+String le mois d\textquotesingle{}avant 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8php_a645aa8a245cbeb2d0d167fcc942b9b5c}\label{fonctions_8php_a645aa8a245cbeb2d0d167fcc942b9b5c}} 
+\index{fonctions.php@{fonctions.php}!getMoisSuivant@{getMoisSuivant}}
+\index{getMoisSuivant@{getMoisSuivant}!fonctions.php@{fonctions.php}}
+\doxysubsubsection{\texorpdfstring{getMoisSuivant()}{getMoisSuivant()}}
+{\footnotesize\ttfamily get\+Mois\+Suivant (\begin{DoxyParamCaption}\item[{}]{\$mois }\end{DoxyParamCaption})}
+
+Fonction qui retourne le mois suivant un mois passé en paramètre
+
+
+\begin{DoxyParams}[1]{Paramètres}
+String & {\em \$mois} & Contient le mois à utiliser\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+String le mois d\textquotesingle{}après 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8php_a673120bc1f5b1c86025f63d160c0aa9b}\label{fonctions_8php_a673120bc1f5b1c86025f63d160c0aa9b}} 
+\index{fonctions.php@{fonctions.php}!getNbTable@{getNbTable}}
+\index{getNbTable@{getNbTable}!fonctions.php@{fonctions.php}}
+\doxysubsubsection{\texorpdfstring{getNbTable()}{getNbTable()}}
+{\footnotesize\ttfamily get\+Nb\+Table (\begin{DoxyParamCaption}\item[{}]{\$pdo,  }\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Fonction générique qui retourne le nombre d\textquotesingle{}enregistrements d\textquotesingle{}une table
+
+
+\begin{DoxyParams}[1]{Paramètres}
+P\+DO & {\em \$pdo} & Instance de la classe P\+DO utilisée pour se connecter \\
+\hline
+String & {\em \$table} & Nom de la table que l\textquotesingle{}on veut utiliser\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Integer avec le nombre d\textquotesingle{}enregistrements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8php_a737fc7684b15055a48683ee1f6683b5b}\label{fonctions_8php_a737fc7684b15055a48683ee1f6683b5b}} 
+\index{fonctions.php@{fonctions.php}!majFicheFrais@{majFicheFrais}}
+\index{majFicheFrais@{majFicheFrais}!fonctions.php@{fonctions.php}}
+\doxysubsubsection{\texorpdfstring{majFicheFrais()}{majFicheFrais()}}
+{\footnotesize\ttfamily maj\+Fiche\+Frais (\begin{DoxyParamCaption}\item[{}]{\$pdo }\end{DoxyParamCaption})}
+
+Fonction qui met à jour les montants des fiches de frais (via des U\+P\+D\+A\+TE S\+QL)
+
+
+\begin{DoxyParams}[1]{Paramètres}
+P\+DO & {\em \$pdo} & instance de la classe P\+DO utilisée pour se connecter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8php_ad1a28b1457da19e4210dfa8869d1c874}\label{fonctions_8php_ad1a28b1457da19e4210dfa8869d1c874}} 
+\index{fonctions.php@{fonctions.php}!updateMdpVisiteur@{updateMdpVisiteur}}
+\index{updateMdpVisiteur@{updateMdpVisiteur}!fonctions.php@{fonctions.php}}
+\doxysubsubsection{\texorpdfstring{updateMdpVisiteur()}{updateMdpVisiteur()}}
+{\footnotesize\ttfamily update\+Mdp\+Visiteur (\begin{DoxyParamCaption}\item[{}]{\$pdo }\end{DoxyParamCaption})}
+
+Fonction qui met à jour les mots de passe des visisteurs avec des mots de pass aléatoire
+
+
+\begin{DoxyParams}[1]{Paramètres}
+P\+DO & {\em \$pdo} & instance de la classe P\+DO utilisée pour se connecter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+null 
+\end{DoxyReturn}
